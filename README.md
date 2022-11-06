@@ -1,6 +1,6 @@
 # E-commerce CoderHouse UNIQLO
 
-Link a [Netlify](https://636711df15da5d6321e2a504--chic-cannoli-02c8f2.netlify.app/).
+Link a [Netlify](https://chic-cannoli-02c8f2.netlify.app/).
 
 Proyecto creado con [Create React App](https://github.com/facebook/create-react-app).
 
