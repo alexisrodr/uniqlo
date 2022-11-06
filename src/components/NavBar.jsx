@@ -4,9 +4,16 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { CartWidget } from './CartWidget';
 import { Link } from 'react-router-dom';
+import { useCartContext } from '../context/cartContext'
 
 
 export const NavBar = () => {
+
+    let cartEmpty = true;
+    const { cartList } = useCartContext()
+    if (cartList.length === 0) cartEmpty = false
+
+
 
     return (
         <Navbar bg="white" expand="lg" sticky="top" className="shadow p-3 mb-5">
@@ -28,7 +35,7 @@ export const NavBar = () => {
                         <Nav.Link as={Link} to='/category/mujeres' className="text-danger">Mujeres</Nav.Link>
                         <Nav.Link as={Link} to='/category/accesorios' className="text-danger">Accesorios</Nav.Link>
                     </Nav>
-                    <CartWidget />
+                    <CartWidget cartEmpty={cartEmpty} />
                 </Navbar.Collapse>
             </Container>
         </Navbar>

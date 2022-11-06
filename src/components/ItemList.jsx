@@ -1,12 +1,13 @@
 import React from 'react'
 import { Item } from './Item';
+import Spinner from 'react-bootstrap/Spinner'
 
 export const ItemList = ({ loading, products }) => {
     return (
         <div className='container'>
             {
                 loading ?
-                    <h2>Cargando...</h2>
+                    <Spinner animation="border" variant="danger" />
                     :
                     products.map(prod => <Item key={prod.id} prod={prod} />)
             }
